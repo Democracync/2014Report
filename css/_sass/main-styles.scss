@@ -1,0 +1,165 @@
+@import '_vars.scss';
+@import '_normalize.scss';
+@import '_girder.scss';
+@import '_mixins.scss';
+@import '_icons.scss';
+
+/*********************
+***** Our Stuff ******
+*********************/
+
+/******** Typography ********/
+
+
+/******** Header ********/
+.big-head {
+}
+
+/******** Disappearing nav bar ********/
+
+
+/******** Responsive Menu ********/
+
+
+/******** Head buttons ********/
+.main-nav {
+	width: 80%;
+	margin: 0 auto 50px auto;
+	background-color: transparent;
+}
+.btn-orange {
+  color: #ffffff;
+  background-color: $orange;
+  border: 3px solid #fff;
+}
+.btn-orange:hover,
+.btn-orange:focus,
+.btn-orange.focus,
+.btn-orange:active,
+.btn-orange.active {
+  color: #ffffff;
+  background-color: $light-orange;
+  border-color: #eee;
+}
+.btn-orange:active,
+.btn-orange.active {
+  background-image: none;
+}
+.btn-orange.disabled,
+.btn-orange[disabled] {
+  background-color: $light-orange;
+  border-color: #fff;
+}
+
+.btn-blue {
+  color: #ffffff;
+  background-color: $blue;
+  border: 3px solid #fff;
+}
+.btn-blue:hover,
+.btn-blue:focus,
+.btn-blue.focus,
+.btn-blue:active,
+.btn-blue.active {
+  color: #ffffff;
+  background-color: $light-blue;
+  border-color: #eee;
+}
+.btn-blue:active,
+.btn-blue.active {
+  background-image: none;
+}
+.btn-blue.disabled,
+.btn-blue[disabled] {
+  background-color: $light-blue;
+  border-color: #fff;
+}
+
+.btn-green {
+  color: #ffffff;
+  background-color: $green;
+  border: 3px solid #fff;
+}
+.btn-green:hover,
+.btn-green:focus,
+.btn-green.focus,
+.btn-green:active,
+.btn-green.active {
+  color: #ffffff;
+  background-color: $light-green;
+  border-color: #eee;
+}
+.btn-green:active,
+.btn-green.active {
+  background-image: none;
+}
+.btn-green.disabled,
+.btn-green[disabled] {
+  background-color: $light-green;
+  border-color: #fff;
+}
+
+.btn-gray {
+  color: #ffffff;
+  background-color: #343434;
+  border: 3px solid $light-orange;
+  line-height: 1.22 !important;
+}
+.btn-gray:hover,
+.btn-gray:focus,
+.btn-gray.focus,
+.btn-gray:active,
+.btn-gray.active {
+  color: #ffffff;
+  background-color: #777;
+  border-color: #eee;
+}
+.btn-gray:active,
+.btn-gray.active {
+  background-image: none;
+}
+.btn-gray.disabled,
+.btn-gray[disabled] {
+  background-color: #777;
+  border-color: #eee;
+}
+
+.btn-xxl,
+.btn-group-xxl > .btn {
+  padding: 7px 15px;
+  font-size: 20px;
+  line-height: 1.66;
+  border-radius: 5px;
+  margin: 5px 7px;
+  width: 160px;
+}
+
+/******** Full-size sections ********/
+.section-header {
+	height: 100%;
+	width: 100%;
+	padding-top: 50px;
+	padding-bottom: 30px;
+	display: table;
+}
+
+.back-to-top {margin-top: 35px;}
+
+.section-header {background: transparent url(../img/main-bg.jpg) repeat; padding-top: 0; border-top: 6px solid #fff;}
+
+
+/******** Apply Section ********/
+.apply-section {background: transparent url(../img/about-bg-2.png) repeat; padding-top: 0; border-top: 6px solid #fff;}
+.apply-header {background: #fff url(../img/apply-head-bg-orange.jpg) center top no-repeat; padding-top: 80px; height: 310px; margin-bottom: 15px;
+    & h1 {color: #fff; font-size: 5em; line-height: .8em; text-shadow: 2px 2px 0px #792d26;}
+}
+h2.apply-sub-head {font-weight: 700; margin-bottom: 20px; line-height: 1.3em;}
+.application-button-section {margin-top: 25px;}
+a.application-button {background-color: #343434; border: 3px solid $light-orange; padding: 12px 7px; max-width: 90%; color: #fff; float: left; border-radius: 10px;
+    & h3 {margin-top: 5px;}
+    &:hover {color: #ffffff; background-color: #777; border-color: #eee; text-decoration: none;}
+    &:hover h3 {color: #fff;}
+}
+
+
+/******** Footer ********/
