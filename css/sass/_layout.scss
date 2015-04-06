@@ -1,0 +1,57 @@
+/* Main page styles */
+body {
+  background-color: #ddd;
+}
+
+// Typography
+
+
+/* Main container */
+.main-container {
+
+}
+
+/* Sections */
+// Header
+.section {
+	min-height: 100%;
+	min-width: 100%;
+	display: table;
+	background: #42a6d3;
+  @include clearfix;
+}
+
+.section-content {
+  @include center(1200px);
+  @media screen and (max-width: $break-huge) {
+    @include center(980px);
+  }
+}
+
+.main-title-wrapper {
+  padding: 0;
+  border: 10px solid #fff;
+  margin: 30px auto 0 auto;
+}
+
+h1.main-title {
+	font-size: 6rem;
+  line-height: 6rem;
+	text-align: center;
+	color: #fff;
+  margin: 0;
+  @media screen and (max-width: $break-huge) {
+    font-size: 4.9rem;
+  }
+}
+h2.main-sub-title {
+  text-align: right;
+  font-size: 2rem;
+  font-weight: normal;
+  color: #fff;
+  margin-top: 10px;
+}
+
+
+
+/* Section content */

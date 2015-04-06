@@ -4,8 +4,10 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%; }
 
-body {
-  margin: 0; }
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%; }
 
 article,
 aside,
@@ -179,44 +181,144 @@ td,
 th {
   padding: 0; }
 
-/* =========================================== */
-/*   Girder v.1.0.4 A Sassy layout helper  // */
-/*   https://github.com/unmaya/Girder     // */
-/* ======================================== */
-*, *:before, *:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box; }
-
-.container {
-  margin: 0 auto;
-  max-width: none; }
-
-.row {
-  padding: 0;
-  clear: both;
-  display: block; }
-  .row:after {
-    clear: both; }
-  .row:before, .row:after {
-    display: table;
-    content: "";
-    line-height: 0; }
-  @media only screen and (min-width: 35.5em) {
-    .row > :first-of-type {
-      padding-left: 0; }
-    .row > :last-child {
-      padding-right: 0; } }
-  .row.no-gutters, .row.no-padding {
-    padding: 0; }
-
-@media only screen and (min-width: 35.5em) {
-  .row.equal-units > :first-of-type {
-    padding-left: 0.625em; }
-  .row.equal-units > :last-child {
-    padding-right: 0.625em; } }
-
+/*  Syntax Quick Reference
+  --------------------------
+  column($ratios: 1, $offset: 0, $cycle: 0, $uncycle: 0, $gutter: $jeet-gutter)
+  span($ratio: 1, $offset: 0)
+  shift($ratios: 0, $col_or_span: column, $gutter: $jeet-gutter)
+  unshift()
+  edit()
+  center($max_width: 1410px, $pad: 0)
+  stack($pad: 0, $align: false)
+  unstack()
+  align($direction: both)
+  cf()
+*/
+/**
+ * Grid settings.
+ * All values are defaults and can therefore be easily overidden.
+ */
+/**
+ * List functions courtesy of the wonderful folks at Team Sass.
+ * Check out their awesome grid: Singularity.
+ */
+/**
+ * Get  percentage from a given ratio.
+ * @param {number} [$ratio=1] - The column ratio of the element.
+ * @returns {number} - The percentage value.
+ */
+/**
+ * Work out the column widths based on the ratio and gutter sizes.
+ * @param {number} [$ratios=1] - The column ratio of the element.
+ * @param {number} [$gutter=$jeet-gutter] - The gutter for the column.
+ * @returns {list} $width $gutter - A list containing the with and gutter for the element.
+ */
+/**
+ * Get the set layout direction for the project.
+ * @returns {string} $direction - The layout direction.
+ */
+/**
+ * Replace a specified list value with a new value (uses built in set-nth() if available)
+ * @param {list} $list - The list of values you want to alter.
+ * @param {number} $index - The index of the list item you want to replace.
+ * @param {*} $value - The value you want to replace $index with.
+ * @returns {list} $list - The list with the value replaced or removed.
+ * @warn if an invalid index is supplied.
+ */
+/**
+ * Reverse a list (progressively enhanced for Sass 3.3)
+ * @param {list} $list - The list of values you want to reverse.
+ * @returns {list} $result - The reversed list.
+ */
+/**
+ * Get the opposite direction to a given value.
+ * @param {string} $dir - The direction you want the opposite of.
+ * @returns {string} - The opposite direction to $dir.
+ * @warn if an incorrect string is provided.
+ */
+/**
+ * Perform a value into a percentage value.
+ * @param {number} $value - The value which should be converted.
+ * @returns {number} $value - The percentage.
+ */
+/**
+ * Style an element as a column with a gutter.
+ * @param {number} [$ratios=1] - A width relative to its container as a fraction.
+ * @param {number} [$offset=0] - A offset specified as a fraction (see $ratios).
+ * @param {number} [$cycle=0] - Easily create an nth column grid where $cycle equals the number of columns.
+ * @param {number} [$uncycle=0] - Undo a previous cycle value to allow for a new one.
+ * @param {number} [$gutter=$jeet-gutter] - Specify the gutter width as a percentage of the containers width.
+ */
+/**
+ * An alias for the column mixin.
+ * @param [$args...] - All arguments get passed through to column().
+ */
+/**
+ * Get the width of a column and nothing else.
+ * @param {number} [$ratios=1] - A width relative to its container as a fraction.
+ * @param {number} [$gutter=$jeet-gutter] - Specify the gutter width as a percentage of the containers width.
+ */
+/**
+ * Get the gutter size of a column and nothing else.
+ * @param {number} [ratios=1] - A width relative to its container as a fraction.
+ * @param {number} [gutter=jeet.gutter] - Specify the gutter width as a percentage of the containers width.
+ */
+/**
+ * An alias for the column-width function.
+ * @param [$args...] - All arguments get passed through to column().
+ */
+/**
+ * An alias for the column-gutter function.
+ * @param [$args...] - All arguments get passed through to column().
+ */
+/**
+ * Style an element as a column without any gutters for a seamless row.
+ * @param {number} [$ratios=1] - A width relative to its container as a fraction.
+ * @param {number} [$offset=0] - A offset specified as a fraction (see $ratios).
+ * @param {number} [cycle=0] - Easily create an nth column grid where cycle equals the number of columns.
+ * @param {number} [uncycle=0] - Undo a previous cycle value to allow for a new one.
+ */
+/**
+ * Reorder columns without altering the HTML.
+ * @param {number} [$ratios=0] - Specify how far along you want the element to move.
+ * @param {string} [$col-or-span=column] - Specify whether the element has a gutter or not.
+ * @param {number} [$gutter=$jeet-gutter] - Specify the gutter width as a percentage of the containers width.
+ */
+/**
+ * Reset an element that has had shift() applied to it.
+ */
+/**
+ * View the grid and its layers for easy debugging.
+ * @param {string} [$color=black] - The background tint applied.
+ * @param {boolean} [$important=false] - Whether to apply the style as !important.
+ */
+/**
+ *  Alias for edit().
+ */
+/**
+ * Horizontally center an element.
+ * @param {number} [$max-width=1410px] - The max width the element can be.
+ * @param {number} [$pad=0] - Specify the element's left and right padding.
+ */
+/**
+ * Uncenter an element.
+ */
+/**
+ * Stack an element so that nothing is either side of it.
+ * @param {number} [$pad=0] - Specify the element's left and right padding.
+ * @param {boolean/string} [$align=false] - Specify the text align for the element.
+ */
+/**
+ * Unstack an element.
+ */
+/**
+ * Center an element on either or both axes.
+ * @requires A parent container with relative positioning.
+ * @param {string} [$direction=both] - Specify which axes to center the element on.
+ */
+/**
+ * Apply a clearfix to an element.
+ */
 @font-face {
   font-family: 'IcoMoon-Free';
   src: url("../fonts/IcoMoon-Free.ttf?-b7qzp2") format("truetype");
@@ -1714,10 +1816,69 @@ th {
 .icon-IcoMoon:before {
   content: "\eaea"; }
 
+/* Main page styles */
+body {
+  background-color: #ddd; }
+
+/* Main container */
+/* Sections */
+.section {
+  min-height: 100%;
+  min-width: 100%;
+  display: table;
+  background: #42a6d3; }
+  .section:before, .section:after {
+    content: " ";
+    display: table; }
+  .section:after {
+    clear: both; }
+
+.section-content {
+  width: auto;
+  max-width: 1200px;
+  float: none;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0;
+  padding-right: 0; }
+  @media screen and (max-width: 1200px) {
+    .section-content {
+      width: auto;
+      max-width: 980px;
+      float: none;
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
+      padding-left: 0;
+      padding-right: 0; } }
+
+.main-title-wrapper {
+  padding: 0;
+  border: 10px solid #fff;
+  margin: 30px auto 0 auto; }
+
+h1.main-title {
+  font-size: 6rem;
+  line-height: 6rem;
+  text-align: center;
+  color: #fff;
+  margin: 0; }
+  @media screen and (max-width: 1200px) {
+    h1.main-title {
+      font-size: 4.9rem; } }
+
+h2.main-sub-title {
+  text-align: right;
+  font-size: 2rem;
+  font-weight: normal;
+  color: #fff;
+  margin-top: 10px; }
+
+/* Section content */
 /*********************
 ***** Our Stuff ******
 *********************/
-/******** Typography ********/
 /******** Header ********/
 /******** Disappearing nav bar ********/
 /******** Responsive Menu ********/
@@ -1830,20 +1991,8 @@ th {
   width: 160px; }
 
 /******** Full-size sections ********/
-.section-header {
-  height: 100%;
-  width: 100%;
-  padding-top: 50px;
-  padding-bottom: 30px;
-  display: table; }
-
 .back-to-top {
   margin-top: 35px; }
-
-.section-header {
-  background: transparent url(../img/main-bg.jpg) repeat;
-  padding-top: 0;
-  border-top: 6px solid #fff; }
 
 /******** Apply Section ********/
 .apply-section {

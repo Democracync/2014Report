@@ -1,14 +1,13 @@
-@import '_vars.scss';
-@import '_normalize.scss';
-@import '_girder.scss';
-@import '_mixins.scss';
-@import '_icons.scss';
+@import '_vars';
+@import '_normalize';
+@import 'jeet/_index';
+@import '_mixins';
+@import '_icons';
+@import '_layout';
 
 /*********************
 ***** Our Stuff ******
 *********************/
-
-/******** Typography ********/
 
 
 /******** Header ********/
@@ -135,17 +134,10 @@
 }
 
 /******** Full-size sections ********/
-.section-header {
-	height: 100%;
-	width: 100%;
-	padding-top: 50px;
-	padding-bottom: 30px;
-	display: table;
-}
+
 
 .back-to-top {margin-top: 35px;}
 
-.section-header {background: transparent url(../img/main-bg.jpg) repeat; padding-top: 0; border-top: 6px solid #fff;}
 
 
 /******** Apply Section ********/

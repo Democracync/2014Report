@@ -16,3 +16,10 @@ $base-font-family: "proxima-nova", arial, sans-serif;
 $secondary-font-family: "proxima-nova-condensed",sans-serif;
 $accent-font: italic "chaparral-pro",sans-serif;
 $accent-font-bold: italic bold "chaparral-pro",sans-serif;
+
+// Media queries
+$break-huge: 1200px;
+$break-large: 980px;
+$break-medium: 780px;
+$break-small: 480px;
+$break-tiny: 320px;
