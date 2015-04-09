@@ -1,30 +1,73 @@
 /* Main page styles */
-body {
-  background-color: #ddd;
+html, body {
+	background-color: $base-bg-color;
+	font-family: $base-font-family;
+	color: $base-font-color;
 }
 
-// Typography
+// Images
+img.full-size-image {
+	max-width: 100%;
+	display: block;
+}
 
 
 /* Main container */
 .main-container {
+	@include center(1600px);
+	padding: 0 20px;
+	@media screen and (max-width: $break-huge) {
 
+	}
 }
 
 /* Sections */
-// Header
 .section {
-	min-height: 100%;
 	min-width: 100%;
-	display: table;
-	background: #42a6d3;
+	padding: 0 0 40px 0;
+	margin: 0;
   @include clearfix;
+
+	&.main-title {
+		background: $blue;
+	}
+	&.staff-image {
+		background: transparent;
+		padding: 0;
+	}
+	&.info{
+		background: #fff;
+	}
 }
 
 .section-content {
   @include center(1200px);
+	padding: 10px 20px;
   @media screen and (max-width: $break-huge) {
-    @include center(980px);
+
+  }
+}
+
+.section-content-wide {
+  @include center(1600px);
+	height: auto;
+  @media screen and (max-width: $break-huge) {
+  }
+}
+
+// Big section titles
+.section-title {
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+
+  &.spotlight {
+    background-color: $green;
+  }
+  & h1 {
+    color: #fff;
+    margin: 0;
+    padding: 0;
   }
 }
 
@@ -32,26 +75,16 @@ body {
   padding: 0;
   border: 10px solid #fff;
   margin: 30px auto 0 auto;
-}
+	@media screen and (max-width: $break-huge) {
 
-h1.main-title {
-	font-size: 6rem;
-  line-height: 6rem;
-	text-align: center;
-	color: #fff;
-  margin: 0;
-  @media screen and (max-width: $break-huge) {
-    font-size: 4.9rem;
-  }
+	}
 }
-h2.main-sub-title {
-  text-align: right;
-  font-size: 2rem;
-  font-weight: normal;
-  color: #fff;
-  margin-top: 10px;
-}
-
-
 
 /* Section content */
+.dem-summer-info {
+	@include col(1/2);
+}
+
+.dem-summer-data {
+	@include col(1/2);
+}
